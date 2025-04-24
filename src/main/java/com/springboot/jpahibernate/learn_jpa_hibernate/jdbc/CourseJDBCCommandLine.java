@@ -24,8 +24,11 @@ public class CourseJDBCCommandLine implements CommandLineRunner {
         repository.save(new Course(3, "Learn Docker", "in28minutes"));
 
 
-        repository.deleteById(1l);
+        //repository.deleteById(1l);
 
         System.out.println(repository.findById(3l));
+        System.out.println(repository.findAll());
+        System.out.println(repository.findByAuthor("in28minutes"));
+        System.out.println(repository.findByName("Learn JPA"));
     }
 }
