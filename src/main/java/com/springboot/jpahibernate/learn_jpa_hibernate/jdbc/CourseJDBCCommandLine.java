@@ -15,5 +15,7 @@ public class CourseJDBCCommandLine implements CommandLineRunner {
 
 
         repository.delete(1);
+
+        System.out.println(repository.find(2));
     }
 }
