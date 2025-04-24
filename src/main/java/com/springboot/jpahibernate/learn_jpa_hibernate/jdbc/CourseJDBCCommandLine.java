@@ -10,6 +10,10 @@ public class CourseJDBCCommandLine implements CommandLineRunner {
     private JdbcRespository repository;
     @Override
     public void run(String... args) throws Exception {
-        repository.insert();
+        repository.insert(new Course(1, "Learn AWS", "in28minutes"));
+        repository.insert(new Course(2, "Learn Spring Boot", "in28minutes"));
+
+
+        repository.delete(1);
     }
 }
