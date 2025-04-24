@@ -1,8 +1,18 @@
 package com.springboot.jpahibernate.learn_jpa_hibernate.jdbc;
 
+
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+
+@Entity //can map entity ()
 public class Course {
+    //Mapping this to the table
+    @Id
     private long id;
+    @Column(name="name")
     private String name;
+    @Column(name="author")//can map my bean to a different name in the database then actually used
     private String author;
 
     public Course() {
